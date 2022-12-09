@@ -1,0 +1,155 @@
+body {
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "hero"
+    "main"
+    "footer";
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(/img/voidcrawler_live2.jpg);
+    background-position: center;
+    background-size: cover;
+
+    height: 250px;
+}
+
+main {
+    margin: 1em;
+}
+
+.calendar__text {
+    margin: 0 1em;
+}
+
+.calendar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    text-align: center;
+}
+
+.month {
+    padding: 0.1em;
+    
+    font-size: 2rem;
+    font-family: 'Bebas Neue', cursive;
+
+    transition-property: transform, color;
+    transition-duration: 350ms;
+}
+
+.month:hover {
+    transform: scale(94%);
+    color: var(--accent);
+}
+
+.table {
+    display: none;
+
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em auto;
+    
+    font-size: 0.9em;
+}
+
+th {
+    color: #FFF;
+    background-color: var(--accent-secondary);
+
+    text-align: left;
+    text-transform: capitalize;
+}
+
+th, td {
+    padding: 0.5em;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd
+}
+
+#table {
+    display: table;
+}
+
+th {
+    font-family: var(--text);
+}
+
+@media (min-width: 768px) {
+    .hero {
+        height: 350px;
+    }
+    
+    .calendar {
+        display: flex;
+        align-items: center;
+
+        padding: 0 1em;
+    }
+
+    .month {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        height: 500px;
+    }
+    
+    main {
+        display: grid; 
+        gap: 1em;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 0.5fr 3fr 3fr 0.5fr;
+        grid-template-areas: 
+        ". article article ."
+        ". calendar calendar ."
+        ". table table ."
+    }
+
+    article {
+        grid-area: article;
+    }
+
+    .calendar {
+        grid-area: calendar;
+        font-size: 2rem;
+    }
+
+    .col {
+        display: flex;
+    }
+
+    .month {
+        padding: 0 13px;
+    }
+
+    table {
+        max-width: 1200px;
+        grid-area: table;
+    }
+}
+
+@media (min-width: 1400px) {
+    .calendar {
+        padding: 1em 0;
+    }
+
+    article {
+        text-align: center;
+    }
+    
+    .month {
+        font-size: 3.5rem;
+    }
+}

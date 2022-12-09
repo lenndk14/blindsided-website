@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blindsided Records</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,700;1,700&family=Roboto:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+    <script src="js/contact.js"></script>
+</head>
+
+<body>
+    <header> <a id="top"></a>
+        <nav class="nav">
+            <a href="index.html" class="logo__link"><img src="img/blindsidedlogo.png" width="71" height="71"
+                    alt="logo" class="nav__img"></a>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">home</a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn"><a href="artists.html">artists</a></button>
+                                <div class="dropdown-content">
+                                    <a href="showcase/showcase-adversary.html#start">Adversary</a>
+                                    <a href="showcase/showcase-cornered.html#start">Cornered</a>
+                                    <a href="showcase/showcase-deathtrap.html#start">Deathtrap</a>
+                                    <a href="showcase/showcase-deconvolution.html#start">Deconvolution</a>
+                                    <a href="showcase/showcase-excoriated.html#start">Excoriated</a>
+                                    <a href="showcase.html#start">Voidcrawler</a>
+                              </div>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">about</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="events.html" class="nav__link">events</a>
+                        </li>
+                        <li class="nav__item nav__item--current">
+                            <a href="contact.html" class="nav__link">contact</a>
+                        </li>
+                    </ul>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <div class="contact__text">
+            <h2>get in touch!</h2>
+            <p>Do you have any questions? Would you like to work with us? Send us a message and we will get back to you
+                as soon as possible!</p>
+        </div>
+        <div class="form__container">
+            <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+                <section class="firstname">
+                    <label for="firstname">First name:</label>
+                    <input type="text" name="firstname" id="firstname">
+                </section>
+                <section class="lastname">
+                    <label for="lastname">Last name:</label>
+                    <input type="text" name="lastname" id="lastname">
+                </section>
+                <section class="email">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                </section>
+                <section class="message">
+                    <label for="message">Your message:</label>
+                    <textarea name="message" id="message" rows="10"></textarea>
+                </section>
+                <section class="submit">
+                    <input type="submit" value="Send" id="send">
+                </section>
+            </form>
+            <img src="img/blindsidedlogo.png" alt="Blindsided Records Logo" class="form__img">
+        </div>
+        <section id="map">
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeLZ-G5FH1ADoH3tOmqlo0K1OLTft-ISM&callback=initMap&v=weekly"
+                async></script>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="footer__content">
+            <h2>&copy; Blindsided Records, 2022</h2>
+            <a class="footer__link" href="#top">
+                <h2>Back to top of page</h2>
+            </a>
+        </div>
+        <div class="socials">
+            <a href="https://www.facebook.com/blindsidedrecords/" class="socials__link" target="blank"><img
+                    src="img/facebook_logo.png" alt="facebook logo"></a>
+            <a href="https://twitter.com" target="blank" class="socials__link"><img src="img/twitter_logo.png"
+                    alt="twitter logo"></a>
+            <a href="https://www.instagram.com/blindsidedrecords/" class="socials__link" target="blank"><img
+                    src="img/instagram_logo.png" alt="instagram logo"></a>
+            <a href="https://www.youtube.com/channel/UCWeBJik7l7Sqo_72V3B9C_Q" class="socials__link" target="blank"><img
+                    src="img/youtube_logo.png" alt="youtube logo"></a>
+            <a href="https://soundcloud.com/user-380844175" class="socials__link" target="blank"><img
+                    src="img/soundcloud_logo.png" alt="soundcloud logo"></a>
+        </div>
+    </footer>
+</body>

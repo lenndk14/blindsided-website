@@ -1,0 +1,253 @@
+body {
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "hero"
+    "main"
+    "footer";
+}
+
+.hero__title {
+    display: none;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.hero__subtitle {
+    display: none;
+    font-size: 2rem;
+}
+
+.hero__img {
+    background-color: hsl(0,0%,0%,0.1) ;
+}
+
+.main__content {
+    margin: 1em;
+    padding: 1em;
+}
+.main__cards {
+    padding: 3em 1em;
+}
+
+.main__media {
+    padding: 2em 1em;
+    /*border-top: 2px solid #000;
+    border-bottom: 2px solid #000;*/
+}
+
+.media__img, .media__iframe {
+    box-shadow: 4px 4px 10px #b1afaf;
+}
+
+.card {
+    margin: 1em 0;
+    padding: 1em;
+
+    color: white;
+    font-size: 1.4em;
+
+    background-image: url(/img/background_card.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #9a3437c5;
+
+    box-shadow: 6px 6px 10px #b1afaf;
+
+    text-align: center;
+
+    transition-property: transform;
+    transition-duration: 350ms;
+}
+
+.card__alternate {
+    margin: 1em 0;
+    padding: 1em;
+
+    color: white;
+    font-size: 1.4em;
+
+    background-image: url(/img/background_card2.png);
+    background-position: center;
+    background-size: cover;
+    background-color: #0c5549c6;
+
+    box-shadow: 6px 6px 10px #b1afaf;
+
+    text-align: center;
+
+    transition-property: transform;
+    transition-duration: 350ms;
+}
+
+.card--variation {
+    background-image: url(/img/background_card3.png);
+}
+
+.card__img {
+    filter: grayscale(100%);
+    padding: 1em 1em 0;
+} 
+
+.card__link {
+    font-weight: 900;
+    color: rgb(255, 176, 176);
+}
+
+.card__link--alternate {
+    font-weight: 900;
+    color: rgb(80, 234, 177);
+}
+
+.card:hover, .card__alternate:hover {
+    transform: scale(98%);
+}
+
+@media (min-width: 768px) {
+    main {
+        display: grid; 
+        gap: 1em;
+        grid-template-rows: auto;
+        grid-template-columns: 0.5fr 6fr 0.5fr;
+        grid-template-areas: 
+        "content content content"
+        "media media media"
+        "card card card";
+    }
+
+    article {
+        grid-area: content;
+        gap: 1em;
+
+        padding: 1em;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main__title {
+        font-size: 20px;
+    }
+
+    .main__media {
+        grid-area: media;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 1em;
+        margin: 0 1em;
+    }
+    
+    .media__row {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .media__img {
+        width: 32%;
+    }
+
+    .media__iframe {
+        width: 48%;
+        max-height: 200px; 
+    }
+
+    .main__cards {
+        grid-area: card;
+    }   
+
+    .card, .card__alternate {
+        display: flex;
+        margin: 1em 1em;
+        justify-content: space-between;
+    }
+
+    .card__alternate {
+        flex-direction: row-reverse;
+    }
+
+    .card__img {
+        width: 48%;
+        align-self: flex-start;
+    }
+
+    .card__content {
+        width: 48%;
+        font-size: smaller;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        display: grid; 
+        grid-template-rows: auto;
+        grid-template-columns: 0.5fr 6fr 0.5fr;
+        grid-template-areas: 
+        ". content ."
+        ". media ."
+        ". card .";
+    }
+    
+    .main__content {
+        width: 48%;
+        padding: 1em 0;
+    }
+
+    .main__title {
+        font-size: 1.5em;
+    }
+    .main__media {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-around;
+        height: 200px;
+        overflow: hidden;
+        padding: 2em 0;
+    }  
+
+    .media__row {
+        justify-content: space-around;
+        align-items: center;
+        width: 58%;
+    }
+
+    iframe {
+        width: 240px;
+        height: 165px;
+    }
+
+    .main__cards {
+        display: flex;
+        justify-content: space-between;
+        padding: 3em 0;
+    }
+
+    .card, .card__alternate {
+        width: 32%;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .card__content, .card__img {
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    .hero__img {
+        width: 100%;
+        height: 650px;
+        object-fit: cover;
+    }
+    
+    article {
+        margin: 0 6em;
+    }
+
+    main {
+        gap: 2em;
+    }
+}

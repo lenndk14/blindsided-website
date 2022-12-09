@@ -1,0 +1,210 @@
+:root {
+    --accent--tile: #c44044;
+    --accent--tile-secondary:  #138d78;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+}
+
+.main__hero {
+    background-image: url(/img/deathtrap.jpg);
+    background-position: center;
+    background-size: cover;
+
+    filter: grayscale(100%);
+
+    padding: 1em;
+    height: 300px;
+    grid-area: hero;
+}
+
+.main__article {
+    margin: 1em;
+    padding: 1em;
+
+    color: #FFF;
+
+    background-image: url(/img/background_card2.png);
+    background-position: center;
+    background-size: cover;
+    background-color: #0c5549c6;
+    grid-area: article;
+}
+
+.main__img {
+    background-image: url(/img/deathtraplive.jpg);
+    background-position: center;
+    background-size: cover;
+
+    filter: grayscale(100%);
+
+    margin: 0.5em 0;
+    height: 250px;
+
+    grid-area: img;
+}
+
+.main__video {
+    display: flex;
+    justify-content: center;
+    grid-area: video;
+}
+
+
+.main__links {
+    padding-top: 2em;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 1em;
+
+    grid-area: links;
+}
+
+.tile__img {
+    transition-property: transform;
+    transition-duration: 300ms;
+}
+
+.tile__img:hover {
+    transform: scale(90%);
+    opacity: 75%;
+}
+
+@media (min-width: 768px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 0.5fr;
+        grid-template-areas: 
+        "hero hero article article"
+        "img img video video"
+        ". links links .";
+        gap: 0.2em;
+
+        margin: 2em 0;
+    }
+
+    .main__tile {
+        margin: 0;
+    }
+
+    .main__article {
+        padding: 0 1em;
+
+        font-size: 0.85rem;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main__container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+        "hero hero article"
+        "hero hero article"
+        "hero hero video"
+        "img img video"
+        "img img links"
+        ;
+    }
+
+    .main__hero, .main__article, .main__img, .main__links, .main__video {
+        height: auto;
+    }
+
+    .main__article {
+        font-size: 0.9rem;
+    }
+
+    .main__links {
+        align-items: center;
+    }
+}
+
+@media (min-width: 1400px) {
+    .main__container {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: 
+        "hero hero hero hero article article"
+        "hero hero hero hero article article"
+        "hero hero hero hero img img"
+        "hero hero hero hero img img"
+        "hero hero hero hero video video"
+        "links links links links video video"
+        ;
+    }
+
+    .main__article {
+        font-size: 1rem;
+    }
+
+    .main__img {
+        height: 300px;
+    }
+    
+}
+
+@media (min-width: 1920px) {
+    .main__container {
+        gap: 0;
+
+        margin-top: 0;
+
+        min-height: 100vh;
+    }
+    .main__hero {
+        margin: 0 2em 2em 0;
+    }
+
+    .main__article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        font-size: 1.125rem;
+        text-align: center;
+    }
+
+    .main__img {
+        height: auto;
+    }
+
+    .main__video {
+        height: auto;
+        padding: 2em;
+
+        align-items: center;
+        overflow: hidden;
+
+        background-image: url(/img/background_card2.png);
+        background-position: center;
+        background-size: cover;
+        background-color: #0c5549c6;
+    }
+
+    .main__links {
+        background-image: url(/img/background_card2.png);
+        background-position: center;
+        background-size: cover;
+        background-color: #0c5549c6;
+    }
+
+    .tile__img {
+        filter: invert(1);
+    }
+
+
+    
+}
+
+
+

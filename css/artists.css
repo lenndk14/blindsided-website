@@ -1,0 +1,171 @@
+:root {
+    --accent--tile: #c44044;
+    --accent--tile-secondary:  #138d78;
+}
+
+h2 {
+    padding: 1em 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+}
+
+.dropbtn {
+    text-decoration: underline;
+    transform: scale(115%);
+}
+
+main {
+    grid-area: main;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1em;
+    margin: 0.2em 0;
+
+    width: 100%;
+    height: 250px;
+}
+
+.tile h2 {
+    color: var(--accent--tile);
+    text-shadow: #000 1px 1px;
+    font-weight: 400;
+    font-size: 2rem;
+
+    transition-property: transform;
+    transition-duration: 250ms;
+}
+
+.tile h2:hover {
+    transform: scale(105%);
+}
+
+.tile {
+    transition-property: transform;
+    transition-duration: 350ms;
+}
+
+.tile:hover {
+    transform: scale(98%);
+    background-blend-mode: darken;
+}
+
+.tile--adversary {
+    background-color: #138d78;
+    background-image: url(/img/adversary1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.tile--cornered {
+    background-color: #c44044;;
+    background-image: url(/img/cornered2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.tile--deathtrap {
+    background-color: #138d78;
+    background-image: url(/img/deathtrap.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.tile--deconvolution {
+    background-color: #c44044;;
+    background-image: url(/img/deconvolution3.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.tile--excoriated {
+    background-color: #138d78;
+    background-image: url(/img/excoriated.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.tile--voidcrawler {
+    background-color: #c44044;;
+    background-image: url(/img/voidcrawlerlive.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width: 768px) {
+    .tile {
+        height: 400px;
+    }
+
+    .tile h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main__container {
+        display: grid;
+        gap: 1em;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-areas: 
+        "tile-1 tile-1 tile-1 tile-1 tile-2 tile-2 tile-3 tile-3 tile-3"
+        "tile-4 tile-4 tile-4 tile-5 tile-5 tile-6 tile-6 tile-6 tile-6";
+    }
+
+    .tile {
+        transition-property: transform;
+        transition-duration: 350ms;
+    }
+
+    .tile:hover {
+        transform: scale(98%);
+        background-blend-mode: darken;
+    }
+
+    .tile h2 {
+        font-size: 1.5rem;
+    }
+
+    .tile--adversary {
+        grid-area: tile-1;
+    }
+
+    .tile--cornered {
+        grid-area: tile-2;
+    }
+
+    .tile--deathtrap {
+        grid-area: tile-3;
+    }
+
+    .tile--deconvolution {
+        grid-area: tile-4;
+    }
+
+    .tile--excoriated {
+        grid-area: tile-5;
+    }
+
+    .tile--voidcrawler {
+        grid-area: tile-6;
+    }
+}
+
+@media (min-width: 1600px) {
+    .tile h2 {
+        font-size: 3rem;
+        text-shadow: #000 2px 2px;
+    }
+}
+
